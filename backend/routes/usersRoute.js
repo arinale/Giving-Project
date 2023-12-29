@@ -1,9 +1,11 @@
 const router = require("express").Router();
 
 const { getAllUsersCtrl } = require("../controllers/usersController");
+const { verifyTokenAndAdmin } = require("../middlewares/verifyToken");
 
+const { verifyToken } = require("../middlewares/verifyToken");
 // /api/users/profile
 
-router.route("/profile").get(getAllUsersCtrl);
+router.route("/profile").get(verifyTokenAndAdmin, getAllUsersCtrl);
 
 module.exports = router;

@@ -4,8 +4,8 @@ const { User } = require("../models/User");
 /***--------------------------------
  * @description Get All Users Profile
  * @router     /api/users/profile
- * @method     POST
- * @access     public
+ * @method     GET
+ * @access     private (only admin)
  ---------------***/
 module.exports.getAllUsersCtrl = asyncHandler(async (req, res) => {
   const users = await User.find();
