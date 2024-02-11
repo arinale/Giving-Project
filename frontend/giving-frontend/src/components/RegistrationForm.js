@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import "./Registeration.css";
 
 const RegistrationForm = () => {
   const [formData, setFormData] = useState({
@@ -31,6 +32,7 @@ const RegistrationForm = () => {
       }}
     >
       <h2>Register</h2>
+
       <form onSubmit={handleSubmit}>
         <label>
           Username:
