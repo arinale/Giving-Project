@@ -23,20 +23,14 @@ const RegistrationForm = () => {
   };
 
   return (
-    <div
-      style={{
-        display: "flex",
-        flexDirection: "column",
-        justifyItems: "center",
-        justifyContent: "center",
-      }}
-    >
+    <div className="register-container">
       <h2>Register</h2>
 
-      <form onSubmit={handleSubmit}>
-        <label>
+      <form className="form-group" onSubmit={handleSubmit}>
+        <label className="label">
           Username:
           <input
+            className="input-field"
             type="text"
             name="username"
             value={formData.username}
@@ -44,9 +38,10 @@ const RegistrationForm = () => {
           />
         </label>
         <br />
-        <label>
+        <label className="label">
           Email:
           <input
+            className="input-field"
             type="email"
             name="email"
             value={formData.email}
@@ -54,9 +49,10 @@ const RegistrationForm = () => {
           />
         </label>
         <br />
-        <label>
+        <label className="label">
           Password:
           <input
+            className="input-field"
             type="password"
             name="password"
             value={formData.password}
@@ -64,7 +60,9 @@ const RegistrationForm = () => {
           />
         </label>
         <br />
-        <button type="submit">Register</button>
+        <button type="submit" className="submit-btn">
+          Register
+        </button>
       </form>
     </div>
   );
